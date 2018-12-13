@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<script>
+
+
+
+    function getLink() {
+
+        var accountNumber = ''
+        var text = document.getElementById('trackingDetails');
+
+        var divLink = document.querySelector('.links')
+        var trackingQualifier = ''
+        var trackingNumber = ''
+
+        var textLength = text.value.split(',').length;
+        for (var i = 0; i < textLength; i++) {
+            accountNumber += '558408863' + ',';
+            trackingQualifier += '12018~' + text.value.split(',')[i] + '~FDEG' + ',';
+            trackingNumber += text.value.split(',')[i] + ',';
+
+        }
+        var fedex = `https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier}&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`
+
+        var link = `<embed src="${fedex}" width="500px" height="2100px" />`
+
+        // `<a href="${fedex}" target="_blank" >LINK TO FEDEX</a>`
+
+
+        divLink.innerHTML += link;
+
+    }
+
+
+</script>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+
+        /*===Header===*/
+        header {
+            font-family: 'Roboto', sans-serif;
+            width: 100vw;
+            height: 50px;
+            border-bottom: 1px solid hsla(0, 0%, 61%, .5);
+        }
+
+
+        nav {
+            height: 50px;
+            position: fixed;
+            width: 60vw;
+
+            left: 0;
+            padding: 0 10%;
+            background: #fff;
+        }
+
+
+        header h2 {
+            text-transform: uppercase;
+            margin-top: 10px;
+            text-align: center;
+
+            color: #29a7de;
+            font-size: 1.2em
+        }
+
+        header img {
+            width: 320px;
+            float: left;
+        }
+
+        .tracking {
+            display: flex;
+            justify-content: center;
+            margin-top: 5vw;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn {
+            background-color: #29a7de;
+            color: #fff;
+            border-radius: 18px;
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 200;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            padding: 5px 40px 5px 40px;
+            margin-left: 30px;
+        }
+
+        input#trackingDetails {
+
+            border: 1px solid #29a7de;
+        }
+    </style>
+    <header>
+        <nav>
+            <img src="https://www.allmediasupply.com/Content/StoreFront/assets/images/logo.png" alt="LOGO">
+            <h2>FedEx POD EXTRACTOR</h2>
+        </nav>
+    </header>
+
+
+    <div class="tracking">
+
+        <input id='trackingDetails' placeholder='Enter tracking number' type="textarea" value=''>
+        <button class='btn' onclick="getLink()">POD</button>
+
+
+    </div>
+    <div class='links'>
+
+    </div>
+</body>
+
+</html>
