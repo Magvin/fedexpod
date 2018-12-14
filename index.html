@@ -29,7 +29,7 @@
             trackingNumber += text.value.split(',')[i] + ',';
 
         }
-        var fedex = `https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}$trackingQualifier=${trackingQualifier}&&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`
+        var fedex = `https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier}&&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`
 
         var link =`<embed src="${fedex}" width="500px" height="2100px" />`
  //`<embed src="${fedex}" width="500px" height="2100px" />`
