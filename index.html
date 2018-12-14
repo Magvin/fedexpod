@@ -31,7 +31,7 @@
             trackingQualifier += '12017~' + text.value.split(',')[i] + '~FDEG' + ',';
             trackingQualifier1 += '12018~' + text.value.split(',')[i] + '~FDEG' + ',';
             trackingQualifier2 += '2458214000~' + text.value.split(',')[i] + '~FX' + ',';
-            trackingQualifier3+='2458204000'+ text.value.split(',')[i] + '~FX' + ',';
+            trackingQualifier3+='2458204000~'+ text.value.split(',')[i] + '~FX' + ',';
             trackingNumber += text.value.split(',')[i] + ',';
 
         }
@@ -39,10 +39,10 @@
         var fedex1=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier1}&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
         var fedex2=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier2}&trackingCarrier=FDXE&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
         var fedex3=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier3}&trackingCarrier=FDXE&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
-        var link =`<embed src="${fedex}" width="500px" height="2100px" />`
-        var link1=`<embed src="${fedex1}" width="500px" height="2100px" />`
-        var link2=`<embed src="${fedex2}" width="500px" height="2100px" />`
-        var link3=`<embed src="${fedex3}" width="500px" height="2100px" />`
+        var link =`<embed src="${fedex}" width="300px" height="2100px" />`
+        var link1=`<embed src="${fedex1}" width="300px" height="2100px" />`
+        var link2=`<embed src="${fedex2}" width="300px" height="2100px" />`
+        var link3=`<embed src="${fedex3}" width="300px" height="2100px" />`
  //`<embed src="${fedex}" width="500px" height="2100px" />`
         // `<a href="${fedex}" target="_blank" >LINK TO FEDEX</a>`
 
