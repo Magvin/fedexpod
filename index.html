@@ -21,22 +21,31 @@
         var divLink = document.querySelector('.links')
         var trackingQualifier = ''
         var trackingNumber = ''
+        var trackingQualifier1 = ''
+        var trackingQualifier2 = ''
 
         var textLength = text.value.split(',').length;
         for (var i = 0; i < textLength; i++) {
             accountNumber += '558408863' + ',';
             trackingQualifier += '12017~' + text.value.split(',')[i] + '~FDEG' + ',';
+            trackingQualifier1 += '12018~' + text.value.split(',')[i] + '~FDXG' + ',';
+            trackingQualifier2 += '2458214000~' + text.value.split(',')[i] + '~FDXE' + ',';
             trackingNumber += text.value.split(',')[i] + ',';
 
         }
         var fedex = `https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier}&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
-
+        var fedex1=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier1}&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
+        var fedex2=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier2}&trackingCarrier=FDXE&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
         var link =`<embed src="${fedex}" width="500px" height="2100px" />`
+        var link1=`<embed src="${fedex1}" width="500px" height="2100px" />`
+        var link2=`<embed src="${fedex2}" width="500px" height="2100px" />`
  //`<embed src="${fedex}" width="500px" height="2100px" />`
         // `<a href="${fedex}" target="_blank" >LINK TO FEDEX</a>`
 
 
         divLink.innerHTML += link;
+        divLink.innerHTML += link1;
+        divLink.innerHTML += link2;
         
     }
 
