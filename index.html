@@ -29,6 +29,7 @@
         var trackingQualifier6=''
         var trackingQualifier7=''
         var trackingQualifier8=''
+        var trackingQualifier9=''
 
         var textLength = text.value.split(',').length;
         for (var i = 0; i < textLength; i++) {
@@ -41,7 +42,8 @@
             trackingQualifier5+='2458184000~'+ text.value.split(',')[i] + '~FX' + ',';
             trackingQualifier6+='2458179000~'+ text.value.split(',')[i] + '~FX' + ',';
             trackingQualifier7+='2458176000~'+ text.value.split(',')[i] + '~FX' + ',';
-            trackingQualifier7+='2458159000~'+ text.value.split(',')[i] + '~FX' + ',';
+            trackingQualifier8+='2458159000~'+ text.value.split(',')[i] + '~FX' + ',';
+            trackingQualifier9+='2458148000~'+ text.value.split(',')[i] + '~FX' + ',';
 
             trackingNumber += text.value.split(',')[i] + ',';
 
@@ -55,10 +57,11 @@
         var fedex6=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier6}&trackingCarrier=FDXE&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
         var fedex7=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier7}&trackingCarrier=FDXE&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
         var fedex8=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier8}&trackingCarrier=FDXE&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
+        var fedex9=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier9}&trackingCarrier=FDXE&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
 
         function handleError(event){
 
-        console.log('error')
+      
 
 
         }
@@ -72,6 +75,7 @@
         var link6=`<embed src="${fedex6}" width="450px" height="260px" />`
         var link7=`<embed src="${fedex7}" width="450px" height="260px" />`
         var link8=`<embed src="${fedex8}" width="450px" height="260px" />`
+        var link9=`<embed src="${fedex9}" width="450px" height="260px" />`
 
  //`<embed src="${fedex}" width="500px" height="2100px" />`
         // `<a href="${fedex}" target="_blank" >LINK TO FEDEX</a>`
@@ -86,9 +90,17 @@
         divLink.innerHTML += link6;
         divLink.innerHTML += link7;
         divLink.innerHTML += link8;
+        divLink.innerHTML += link9;
         
     }
+ try{
+getLink()
 
+       }catch{
+
+
+        console.error(error);
+       }
 
 </script>
 
