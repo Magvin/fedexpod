@@ -26,7 +26,8 @@
         var trackingQualifier3=''
         var trackingQualifier4=''
         var trackingQualifier5=''
-            var trackingQualifier6=''
+        var trackingQualifier6=''
+        var trackingQualifier7=''
 
         var textLength = text.value.split(',').length;
         for (var i = 0; i < textLength; i++) {
@@ -38,6 +39,7 @@
             trackingQualifier4+='2458187000~'+ text.value.split(',')[i] + '~FX' + ',';
             trackingQualifier5+='2458184000~'+ text.value.split(',')[i] + '~FX' + ',';
             trackingQualifier6+='2458179000~'+ text.value.split(',')[i] + '~FX' + ',';
+            trackingQualifier7+='2458176000~'+ text.value.split(',')[i] + '~FX' + ',';
             trackingNumber += text.value.split(',')[i] + ',';
 
         }
@@ -48,6 +50,8 @@
         var fedex4=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier4}&trackingCarrier=FDXE&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
         var fedex5=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier5}&trackingCarrier=FDXE&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
         var fedex6=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier6}&trackingCarrier=FDXE&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
+        var fedex7=`https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier7}&trackingCarrier=FDXE&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
+
         var link =`<embed src="${fedex}" width="450px" height="260px" />`
         var link1=`<embed src="${fedex1}" width="450px" height="260px" />`
         var link2=`<embed src="${fedex2}" width="450px" height="260px" />`
@@ -55,6 +59,8 @@
         var link4=`<embed src="${fedex4}" width="450px" height="260px" />`
         var link5=`<embed src="${fedex5}" width="450px" height="260px" />`
         var link6=`<embed src="${fedex6}" width="450px" height="260px" />`
+        var link7=`<embed src="${fedex7}" width="450px" height="260px" />`
+
  //`<embed src="${fedex}" width="500px" height="2100px" />`
         // `<a href="${fedex}" target="_blank" >LINK TO FEDEX</a>`
 
@@ -66,6 +72,7 @@
         divLink.innerHTML += link4;
         divLink.innerHTML += link5;
         divLink.innerHTML += link6;
+        divLink.innerHTML += link7;
         
     }
 
