@@ -55,7 +55,7 @@
 
         }
         var fedex = `https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
-               var fedex1 = `https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier12}&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
+               var fedex = `https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier12}&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
 
         
         
@@ -63,7 +63,7 @@
       
         
         var link =`<embed src="${fedex}" width="450px" height="2000px" onerror="handleError(event)" />`
-       var link11=`<embed src="${fedex1}" width="450px" height="2000px" onerror="handleError(event)" />`
+       var link11=`<embed src="${fedex}" width="450px" height="2000px" onerror="handleError(event)" />`
 
 
  //`<embed src="${fedex}" width="500px" height="2100px" />`
