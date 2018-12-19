@@ -58,14 +58,18 @@
         }
         var fedex = `https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
 
-        
+                var fedex = `https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier13}&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
+
         
         
       
         
         var link =`<embed src="${fedex}" width="450px" height="2000px" onerror="handleError(event)" />`
       
+ var link13 =`<embed src="${fedex13}" width="450px" height="2000px" onerror="handleError(event)" />`
+      
 
+        divLink.innerHTML += link13;
 
  //`<embed src="${fedex}" width="500px" height="2100px" />`
         // `<a href="${fedex}" target="_blank" >LINK TO FEDEX</a>`
