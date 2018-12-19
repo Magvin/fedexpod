@@ -33,6 +33,7 @@
         var trackingQualifier10=''
          var trackingQualifier11=''
          var trackingQualifier12=''
+         var trackingQualifier13=''
 
         var textLength = text.value.split(',').length;
         for (var i = 0; i < textLength; i++) {
@@ -50,11 +51,13 @@
             trackingQualifier10+='2458142000~'+ text.value.split(',')[i] + '~FX' + ',';
             trackingQualifier11+='2457947000~'+ text.value.split(',')[i] + '~FX' + ',';
             trackingQualifier12+='2457955000~'+ text.value.split(',')[i] + '~FX' + ',';
+            trackingQualifier13+='2458094000~'+ text.value.split(',')[i] + '~FX' + ',';
 
             trackingNumber += text.value.split(',')[i] + ',';
 
         }
         var fedex = `https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
+        var fedex13 = `https://www.fedex.com/trackingCal/retrievePDF.jsp?trackingNumber=${trackingNumber}&trackingQualifier=${trackingQualifier13}&trackingCarrier=FDXG&shipDate=&destCountry=&locale=en_US&accountNbr=${accountNumber}&type=SPOD&appType=&anon=`;
 
         
         
@@ -62,6 +65,7 @@
       
         
         var link =`<embed src="${fedex}" width="450px" height="2000px" onerror="handleError(event)" />`
+         var link13 =`<embed src="${fedex}" width="450px" height="2000px" onerror="handleError(event)" />`
       
 
 
@@ -70,6 +74,8 @@
 
 
         divLink.innerHTML += link;
+        divLink.innerHTML += link13;
+      
       
 
         
